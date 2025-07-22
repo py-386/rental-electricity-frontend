@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>登入</h1>
+        <nav>
+            <a href="/">回儀表板</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="login-form">
+            <div class="form-control">
+                <label for="username">帳號:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-control">
+                <label for="password">密碼:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">登入</button>
+        </form>
+
+        <section id="manual-entry" class="hidden">
+            <h2>手動輸入</h2>
+            <form id="manual-entry-form">
+                <div class="form-control">
+                    <label for="entry-room">房間:</label>
+                    <select id="entry-room">
+                        <option value="801">801</option>
+                        <option value="802">802</option>
+                        <option value="803">803</option>
+                        <option value="804">804</option>
+                        <option value="805">805</option>
+                        <option value="806">806</option>
+                        <option value="807">807</option>
+                        <option value="808">808</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="entry-reading">電錶度數:</label>
+                    <input type="number" id="entry-reading" step="0.01" required>
+                </div>
+                <div class="form-control hidden" id="event-control">
+                    <label for="entry-event">事件 (僅801房):</label>
+                    <select id="entry-event">
+                        <option value="">無</option>
+                        <option value="in">進房</option>
+                        <option value="out">出房</option>
+                    </select>
+                </div>
+                <button type="submit">送出</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電費儀表板</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>電費儀表板</h1>
+        <nav>
+            <a href="/login.html">登入</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>全覽儀表板</h2>
+            <div class="controls">
+                <label for="room-select">房間:</label>
+                <select id="room-select">
+                    <option value="all">全部</option>
+                    <option value="801">801</option>
+                    <option value="802">802</option>
+                    <option value="803">803</option>
+                    <option value="804">804</option>
+                    <option value="805">805</option>
+                    <option value="806">806</option>
+                    <option value="807">807</option>
+                    <option value="808">808</option>
+                </select>
+                <label for="start-date">開始時間:</label>
+                <input type="date" id="start-date">
+                <label for="end-date">結束時間:</label>
+                <input type="date" id="end-date">
+                <button id="query-btn">查詢</button>
+            </div>
+            <div id="chart-container"></div>
+        </section>
+
+        <section id="personal-analysis">
+            <h2>801房個人用電分析</h2>
+            <div class="controls">
+                 <label for="personal-start-date">開始時間:</label>
+                <input type="date" id="personal-start-date">
+                <label for="personal-end-date">結束時間:</label>
+                <input type="date" id="personal-end-date">
+                <button id="personal-query-btn">查詢</button>
+            </div>
+            <div id="personal-data-container"></div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
